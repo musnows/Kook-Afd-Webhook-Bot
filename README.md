@@ -9,7 +9,6 @@
 </div>
 
 
-
 ## 1.简介
 
 本文档主要讲解如何将kook机器人与爱发电的webhook功能进行对接
@@ -68,15 +67,21 @@ custom_order_id=kook用户id:vip天数
 
 代码详见 [main.py](./main.py)
 
-##### 2.2.1 vip物品url获取
+#### 2.2.1 vip物品url获取
 
-先创建你的vip店铺，这里我拿周vip和月vip作为示例
+先创建你的vip店铺。爱发电的商品有`隐藏`功能，隐藏后的商品将不会显示在主页上，这样也能实现用户只能通过bot提供的链接来访问购买的操作
 
-![image-20230419192014546](https://img.musnow.top/i/2023/04/643fce843df92.png)
+![image-20230419223059244](https://img.musnow.top/i/2023/04/643ffb22e93a1.png)
+
+![image-20230419223112664](https://img.musnow.top/i/2023/04/643ffb303e7c4.png)
+
+这里我拿周vip和月vip作为示例
+
+![643fce843df92](./img/643fce843df92.png)
 
 点击商品，进入详情页，点击发电
 
-![image-20230419192118822](https://img.musnow.top/i/2023/04/643fceb15227a.png)
+![643fceb15227a](./img/643fceb15227a.png)
 
 进入付款页面后，复制最上方的url
 
@@ -102,7 +107,7 @@ https://afdian.net/order/create?product_type=1&plan_id=9aea871c304911ed8ec452540
 
 ![image-20230419192256714](https://img.musnow.top/i/2023/04/643fcf10cb956.png)
 
-##### 2.2.2 vip物品url配置
+#### 2.2.2 vip物品url配置
 
 找到`main.py`中的如下代码，将里面的`vip_item_link`替换成你自己的url。如果需要添加更多商品，将两个`----------`中间的部分多复制几份即可
 
@@ -139,7 +144,7 @@ async def shop_cmd(msg:Message,*arg):
         _log.exception(f"Err in shop")
 ~~~
 
-##### 2.2.3 启动机器人并配置webhook
+#### 2.2.3 启动机器人并配置webhook
 
 先安装依赖项（Python版本3.10）
 
@@ -150,7 +155,6 @@ pip3.10 install -r requierments.txt
 * 配置文件示例`config/config.exp.json`
 * 在内部填写正确的机器人token字段后，重命名为`config.json`
 * 并将`config/log.exp`中的两个文件复制到`log/`路径下
-
 
 然后启动机器人
 
@@ -185,7 +189,7 @@ kill掉机器人后，在log文件中也能看到这次测试webhook的请求体
 
 ### 2.3 命令截图
 
-##### 2.3.1 基础测试
+#### 2.3.1 基础测试
 
 先测试一下机器人上线没有
 
@@ -211,7 +215,7 @@ url中的`%3A`就是`:`
 
 ----
 
-##### 2.3.2 购入vip测试
+#### 2.3.2 购入vip测试
 
 如下，我购买了一个周vip，机器人成功获取到了webhook体中的自定义订单id
 
