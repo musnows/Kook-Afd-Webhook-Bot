@@ -1,0 +1,13 @@
+{
+    "bot": {
+        "token": "bot webhook/websocket token",
+        "verify_token": "bot webhook verify token",
+        "encrypt": "bot webhook encrypt token",
+        "webhook_port": 40000,
+        "ws": false,
+        "info": "set 'ws' to false if using webhook"
+    },
+    "channel": {
+        "debug_ch": "channel id for sending debug msg"
+    }
+}

@@ -1,0 +1,13 @@
+# config file
+config.json
+
+# log file
+log/
+*.log
+
+# python file
+__pycache__/
+
+# idea
+.idea/
+.vscode/
