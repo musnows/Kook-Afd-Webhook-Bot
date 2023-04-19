@@ -3,8 +3,8 @@
 <div align="center">
 
 
-![python](https://img.shields.io/badge/Python-3.10-green) ![commit](https://img.shields.io/github/last-commit/musnows/Kook-Valorant-Bot) 
-[![khl server](https://www.kaiheila.cn/api/v3/badge/guild?guild_id=3986996654014459&style=0)](https://kook.top/gpbTwZ) ![githubstars](https://img.shields.io/github/stars/musnows/Kook-Valorant-Bot?style=social)
+![python](https://img.shields.io/badge/Python-3.10-green) ![commit](https://img.shields.io/github/last-commit/musnows/Kook-Afd-Webhook-Bot) 
+[![khl server](https://www.kaiheila.cn/api/v3/badge/guild?guild_id=3986996654014459&style=0)](https://kook.top/gpbTwZ) ![githubstars](https://img.shields.io/github/stars/musnows/Kook-Afd-Webhook-Bot?style=social)
 
 </div>
 
