@@ -71,9 +71,9 @@ custom_order_id=kook用户id:vip天数
 
 先创建你的vip店铺。爱发电的商品有`隐藏`功能，隐藏后的商品将不会显示在主页上，这样也能实现用户只能通过bot提供的链接来访问购买的操作
 
-![image-20230419223059244](https://img.musnow.top/i/2023/04/643ffb22e93a1.png)
+![image-20230419223059244](./img/643ffb22e93a1.png)
 
-![image-20230419223112664](https://img.musnow.top/i/2023/04/643ffb303e7c4.png)
+![image-20230419223112664](./img/643ffb303e7c4.png)
 
 这里我拿周vip和月vip作为示例
 
@@ -85,7 +85,7 @@ custom_order_id=kook用户id:vip天数
 
 进入付款页面后，复制最上方的url
 
-![image-20230419192145330](https://img.musnow.top/i/2023/04/643fcec9808af.png)
+![image-20230419192145330](./img/643fcec9808af.png)
 
 ~~~
 https://afdian.net/order/create?product_type=1&plan_id=9aea871c304911ed8ec452540025c377&sku=%5B%7B%22sku_id%22%3A%229aed6edc304911edbeb552540025c377%22,%22count%22%3A1%7D%5D
@@ -105,7 +105,7 @@ https://afdian.net/order/create?product_type=1&plan_id=9aea871c304911ed8ec452540
 
 复制到浏览器，仍可正常访问，代表配置无误
 
-![image-20230419192256714](https://img.musnow.top/i/2023/04/643fcf10cb956.png)
+![image-20230419192256714](./img/643fcf10cb956.png)
 
 #### 2.2.2 vip物品url配置
 
@@ -164,7 +164,7 @@ python3.10 start.py
 
 看到如下输出即为启动成功
 
-![image-20230419193628380](https://img.musnow.top/i/2023/04/643fd23c6dff9.png)
+![image-20230419193628380](./img/643fd23c6dff9.png)
 
 我们需要将api的地址填写到爱发电的webhook url中
 
@@ -172,11 +172,11 @@ python3.10 start.py
 
 记得开放对应端口防火墙，并正确绑定域名和开启https
 
-![image-20230419194646676](https://img.musnow.top/i/2023/04/643fd4a6a408b.png)
+![image-20230419194646676](./img/643fd4a6a408b.png)
 
 填写url后点击保存，爱发电会发送一条测试webhook给你的机器人。如果在预先定义的debug_ch中看到了如下卡片，则代表webhook配置成功
 
-![image-20230419194631552](https://img.musnow.top/i/2023/04/643fd4979854c.png)
+![image-20230419194631552](./img/643fd4979854c.png)
 
 ~~~
 [23-04-19 19:46:07] INFO:api.py:aifadian_webhook:31 | request | /afd
@@ -185,7 +185,7 @@ python3.10 start.py
 
 kill掉机器人后，在log文件中也能看到这次测试webhook的请求体
 
-![image-20230419194914026](https://img.musnow.top/i/2023/04/643fd53a4804f.png)
+![image-20230419194914026](./img/643fd53a4804f.png)
 
 ### 2.3 命令截图
 
@@ -193,17 +193,17 @@ kill掉机器人后，在log文件中也能看到这次测试webhook的请求体
 
 先测试一下机器人上线没有
 
-![image-20230419193407783](https://img.musnow.top/i/2023/04/643fd1afc1a49.png)
+![image-20230419193407783](./img/643fd1afc1a49.png)
 
 刚开始时，没有vip用户
 
-![image-20230419193337782](https://img.musnow.top/i/2023/04/643fd191e4690.png)
+![image-20230419193337782](./img/643fd191e4690.png)
 
-![image-20230419193356371](https://img.musnow.top/i/2023/04/643fd1a45f307.png)
+![image-20230419193356371](./img/643fd1a45f307.png)
 
 使用商城命令，获取购买按钮
 
-![image-20230419194053131](https://img.musnow.top/i/2023/04/643fd345357d4.png)
+![image-20230419194053131](./img/643fd345357d4.png)
 
 点击按钮，会跳转到爱发电的付款页面，能看到url最后成功附着上了用户id和时间
 
@@ -219,19 +219,19 @@ url中的`%3A`就是`:`
 
 如下，我购买了一个周vip，机器人成功获取到了webhook体中的自定义订单id
 
-![image-20230419195247714](https://img.musnow.top/i/2023/04/643fd60fbabe7.png)
+![image-20230419195247714](./img/643fd60fbabe7.png)
 
 此时再次执行vip命令，能看到已经正确添加上了7天的vip
 
-![image-20230419195407303](https://img.musnow.top/i/2023/04/643fd65f46258.png)
+![image-20230419195407303](./img/643fd65f46258.png)
 
-![image-20230419195631005](https://img.musnow.top/i/2023/04/643fd6ef0ec7e.png)
+![image-20230419195631005](./img/643fd6ef0ec7e.png)
 
 日志文件也成功记录
 
-![image-20230419195714087](https://img.musnow.top/i/2023/04/643fd71a104c1.png)
+![image-20230419195714087](./img/643fd71a104c1.png)
 
-![image-20230419195649205](https://img.musnow.top/i/2023/04/643fd7012ccc0.png)
+![image-20230419195649205](./img/643fd7012ccc0.png)
 
 测试完毕！
 
