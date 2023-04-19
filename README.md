@@ -147,7 +147,10 @@ async def shop_cmd(msg:Message,*arg):
 pip3.10 install -r requierments.txt
 ~~~
 
-配置文件示例`config/config.exp.json`，在内部填写正确的机器人token字段，并将`config/log.exp`中的两个文件复制到`log/`路径下
+* 配置文件示例`config/config.exp.json`
+* 在内部填写正确的机器人token字段后，重命名为`config.json`
+* 并将`config/log.exp`中的两个文件复制到`log/`路径下
+
 
 然后启动机器人
 
