@@ -37,7 +37,7 @@
 要想和爱发电的api对接，首先bot自己需要维护一个webhook的api-url。这也要求你的机器人是部署在**可公网访问**的环境中，否则爱发电的webhook无法送达。
 
 * 爱发电开发者页面 https://afdian.net/dashboard/dev
-* 该url必须为https协议，所以你还需要绑定域名并配置ssl
+* 该url**建议**为https协议，如果使用https，你还需要绑定域名并配置ssl
 
 同时，为了保证webhook中始终有`custom_order_id`字段，您需要告知您的用户，只能通过机器人生成的url来购买vip。否则自动化流程将失效
 
